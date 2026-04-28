@@ -1,15 +1,11 @@
 [build]
-  # The command to build your project
-  command = "npm run build"
-  
-  # The directory that contains the deploy-ready HTML/assets
-  publish = "dist"
-
-  # (Optional) Directory for serverless functions
-  functions = "netlify/functions"
+  # Leave command empty because there is no package.json to run
+  command = ""
+  # Set publish to "." to serve files (like index.html) from the root
+  publish = "."
 
 [[redirects]]
-  # This rule is often needed for Single Page Applications (SPAs)
+  # Keeps your SPA-style routing working if applicable
   from = "/*"
   to = "/index.html"
   status = 200
